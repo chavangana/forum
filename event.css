@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+             
+     
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+     
+* {
+    box-sizing: border-box
+}
+root{
+   font-size: 10px;
+}
+body {
+    font-family: Verdana, sans-serif; margin:0;
+}
+.mySlides {
+    display: none
+}
+img {
+    margin-top: 4rem;
+    vertical-align: middle;
+    
+    width: 100%;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 95%;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1.6rem;
+  margin-top: -2.2rem;
+  color: white;
+  background-color: rgba(45, 42, 42, 0.375);
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  border-radius: 0 0.3rem 0.3rem 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #F7D585;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0.8rem;
+  width: 100%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;}
+  
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 0.2rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.card-of-programs{
+  margin-top: 10em;
+}
+
+h2 {
+     color: #0a4870;
+     font-weight: 500;
+}
+ ul {
+     display: flex;
+   justify-content: space-around;
+     flex-wrap: wrap;
+     list-style: none;
+     padding: 0;
+}
+ul .cards {
+position: relative;
+height: calc(10% - 0.5rem);
+width: calc(30% - 2rem); /* Adjust the width as needed */
+display: flex;
+flex: 0 0 calc(70% - 4rem); /* Adjust the flex value as needed */
+flex-direction: column;
+justify-content: space-around;
+margin: 4rem;
+margin-bottom: 3rem;
+-webkit-border-radius: 1rem;
+-moz-border-radius: 1rem;
+border-radius: 1rem;
+overflow: hidden;
+background-position: center center;
+background-size: cover;
+text-align: center;
+color: #0a4770;
+transition: 0.3s;
+}
+
+
+ ul .cards::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(10, 72, 112, 0);
+     transition: 0.3s;
+}
+ ul .cards .book-container {
+     height: 20rem;
+}
+ ul .cards .book-container .content {
+     position: relative;
+     opacity: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+     width: 100%;
+     transform: translateY(-20rem);
+     transition: 0.3s;
+}
+
+ ul .cards .book-container .content .btn {
+     border: 0.3rem solid white;
+     padding: 1rem 1.5rem;
+     background: none;
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 1.3em;
+     color: white;
+     cursor: pointer;
+     transition: 0.3s;
+}
+
+ ul .cards .book-container .content .btn:hover {
+     background: white;
+     border: 0px solid white;
+     color: #0a4870;
+}
+ ul .cards .programname {
+     flex: 1 0 auto;
+     padding: 2rem;
+     background: #f0f0f0;
+     transform: translateY(20.06rem);
+     transition: 0.3s;
+}
+ ul .cards .programname .title {
+     position: relative;
+     padding-bottom: 1rem;
+     margin-bottom: 1rem;
+     font-weight: bold;
+     font-size: 1.2em;
+}
+ ul .cards .programname .title::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     height: 0.3rem;
+     width: 5rem;
+     margin: auto;
+     background: #0a4870;
+}
+ ul .cards .programname .venue {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 1rem;
+}
+ ul .cards .programname .venue .icon {
+     margin-right: 1rem;
+}
+ ul .cards .programname .more-information {
+     opacity: 0;
+     transition: 0.3s;
+}
+ ul .cards .programname .more-information .info-and-date-container {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+ ul .cards .programname .more-information .info-and-date-container .box {
+     flex: 1 0;
+     padding: 1.5rem;
+     margin-top: 2rem;
+     -webkit-border-radius: 1rem;
+     -moz-border-radius: 1rem;
+     border-radius: 1rem;
+     background: white;
+     font-weight: bold;
+     font-size: 0.9em;
+}
+ ul .cards .programname .more-information .info-and-date-container .box .icon {
+     margin-bottom: 0.5rem;
+}
+ ul .cards .programname .more-information .info-and-date-container .box.info {
+     color: #ec992c;
+     margin-right: 1rem;
+
+}
+ ul .cards .programname .more-information .disclaimer {
+     margin-top: 2rem;
+     font-size: 1.2em;
+  font-weight: 500;
+  
+  color: #e13b4a;
+}
+ ul .cards:hover::before {
+     background: rgba(10, 72, 112, 0.6);
+}
+ ul .cards:hover .book-container .content {
+     opacity: 1;
+     transform: translateY(0px);
+}
+ ul .cards:hover .programname {
+     transform: translateY(0px);
+}
+ ul .cards:hover .programname .more-information {
+     opacity: 1;
+}
+ @media (max-width: 768px) {
+     ul .cards::before {
+         background: rgba(10, 72, 112, 0.6);
+    }
+     ul .cards .book-container .content {
+         opacity: 1;
+         transform: translateY(0px);
+    }
+     ul .cards .programname {
+         transform: translateY(0px);
+    }
+     ul .cards .programname .more-information {
+         opacity: 1;
+    }
+}
+
+ .credits {
+     display: table;
+     background: #0a4870;
+     color: white;
+     line-height: 2.5rem;
+     margin: 1rem auto;
+     padding: 2rem;
+     -webkit-border-radius: 1rem;
+     -moz-border-radius: 1rem;
+     border-radius: 1rem;
+     text-align: center;
+}
+.text{
+  font-weight: 900;
+
+}
+ .credits a {
+     color: #e3ebf1;
+}
+ h1 {
+     margin: 1rem 2rem;
+    background-color: rgb(48, 255, 25);
+    display: inline ;
+
+}
+.btn:hover{
+ border : 0.5rem solid  rgba(10, 72, 112, 0.6) !important;
+ border-radius: 1rem;
+ background-color: #0fefbe  !important;
+ color: white !important;
+}
+
+   /* New animation styles for the background */
+   .card-of-programs {
+       position: relative;
+       overflow: hidden;
+   }
+
+   .background-animation {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: linear-gradient(45deg, #ff9900, #ff3366, #00cc99, #9933cc);
+       animation: backgroundAnimation 10s infinite;
+       opacity: 0.6;
+       pointer-events: none;
+   }
+
+   @keyframes backgroundAnimation {
+       0% {
+           background-position: 0% 50%;
+       }
+       50% {
+           background-position: 100% 50%;
+       }
+       100% {
+           background-position: 0% 50%;
+       }
+   }
+
+   .glow {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 100%;
+       height: 100%;
+       background-color: rgba(255, 255, 255, 0.2);
+       animation: glowAnimation 2s ease-in-out infinite;
+       opacity: 0;
+       pointer-events: none;
+   }
+
+   @keyframes glowAnimation {
+       0%, 100% {
+           opacity: 0;
+       }
+       50% {
+           opacity: 1;
+       }
+   }
+   @keyframes backgroundAnimation {
+0%, 100% {
+   background-position: 0% 50%;
+}
+25% {
+   background-position: 100% 50%;
+}
+50% {
+   background-position: 0% 50%;
+}
+75% {
+   background-position: 100% 50%;
+}
+}
+@media (max) {
+.cards{
+   max-height: min-content;
+}
+}
+@media (max-width: 768px) {
+       /* Adjust slideshow container for smaller screens */
+       .slideshow-container {
+           max-width: 100%;
+       }
+
+       /* Adjust prev and next button font size */
+       .prev, .next {
+           font-size: 1.5rem;
+       }
+
+       /* Make sections responsive */
+       section {
+           padding: 1rem 0;
+           width: 100%;
+       }
+
+       /* Adjust dot size for smaller screens */
+       .dot {
+           height: 0.7rem;
+           width: 0.7rem;
+           margin: 0 0.15rem;
+       }
+       .card-of-programs{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+          
+           justify-content: space-evenly;
+       }
+       .card-of-programs ul{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 0.5rem;
+
+
+       }
+      
+
+       /* ... Other responsive styles ... */
+   }

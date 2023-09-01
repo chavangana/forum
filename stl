@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    font-size: 10px;
+    --font-size: 2rem;
+    --heading-size: 4rem;
+    --primary-color: 	#000000;
+    --secondary-color: #c30450;
+    
+    --surface-color1: linear-gradient( #940f40ee 30% , #EE9CA7 90%,  #f8bbc3  );
+    --surface-color2: linear-gradient( #670026f6 30% , #eb5569 90%,  #f1566a  );
+    --surface-color: linear-gradient(120deg, #09203f77 ,#d8b5ff65 , #1eae988b);
+    --bg-color2: 	#111111;
+
+    color: var(--secondary-color);
+}
+
+body{
+    color: var(--primary-color);
+    background: var(--bg-color);
+}
+#description {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://dsclatur.org/wp-content/uploads/2023/03/Dayanand-Logo.jpeg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    margin: 0 1rem;
+    padding: 1rem;
+    transition: 0.5 all;
+}
+
+#description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--surface-color);
+    height: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem var(--surface-color);
+}
+
+.text {
+    z-index: 1;
+    opacity: 0; 
+    font-size: var(--font-size);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    white-space: pre-wrap;
+    max-width: 1200px;
+    text-align: justify;
+}
+
+.text::first-letter{
+    font-size: var(--heading-size);
+}
+
+
+/* Team Section */
+.team-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+    background: var(--surface-color);
+    padding: 0 5rem; 
+    margin: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    width: 30rem;
+    margin: 1.5rem 0 1rem 0;
+    background: var(--surface-color1);
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;  
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 4rem 0 4rem 0;
+    padding: 1rem;
+
+    
+}
+
+.team-member:hover{
+    box-shadow: 0 0 20px #940f40ee;
+    transform: scale(1.2);
+    background: var(--surface-color2);
+}
+
+
+.team-member .imageCon {
+    width:15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin: 0 auto 10px 0 10px;
+    border:5px solid white;
+    overflow: hidden;
+
+}
+.imageCon img{
+    width:100%;
+}
+
+.team-member p {
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: var(--font-size);
+
+}
+
+.designation {
+    font-size: var(--font-size);
+}
+.team-heading {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.team-heading h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--heading-size);
+    color: var(--secondary-color);
+    font-weight: bold;
+    background: var(--surface-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.mission-content,
+.goals-content,
+.vision-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-content h2,
+.goals-content h2,
+.vision-content h2 {
+    margin-bottom: 2rem;
+}
+
+.section-card {
+    border-radius: 10px;
+    padding: 0 2rem 2rem 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 4rem 1rem;
+    background: var(--surface-color);
+
+}
+
+.section-heading {
+    font-size: var(--heading-size);
+    color: var(--secondary-color);
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+.section-card p{
+    margin: 2rem 1rem;
+}
+.section-content {
+    font-size: var(--font-size);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+
+.sectionContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width:1210px) {
+    :root{
+        font-size: 7px;
+    }
+}
+@media screen and (max-width:800px) {
+    :root{
+        font-size: 6px;
+    }
+}
